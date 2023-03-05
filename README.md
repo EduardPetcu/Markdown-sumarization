@@ -1,6 +1,6 @@
 Eduard Petcu - 334CC
 
-===============================================================================
+==========================================================================
 
 Titluri ATX
 
@@ -11,7 +11,7 @@ cuvintele titlului, se intra intr-o stare care ignora toate '#'-urile (de la
 final de rand). Dupa ce se intalneste '\r\n' se considera finalul titlului 
 si se intra inapoi in starea INITIAL.
 
-===============================================================================
+==========================================================================
 
 Titluri STX
 
@@ -23,7 +23,7 @@ urmatorul rand are numai egaluri sau linii (face match pe regula [=]+ sau
 cu strlen(STXTitle). In caz afirmativ, acesta va fi interpretat ca un titlu
 de nivel 1 sau 2 iar in caz contrar este interpretat ca paragraf.
 
-===============================================================================
+==========================================================================
 
 Elemente de accentuare
 
@@ -32,7 +32,7 @@ Se da match pe "**"[a-zA-Z0-9 ]+"**" (si celelalte tipuri de elemente de
 accentuare si se afiseaza sirul match-uit fara primul/primele 2 si 
 ultimul/ultimele 2 caracter/caractere.
 
-===============================================================================
+==========================================================================
 
 Linkuri si imagini
 
@@ -44,7 +44,7 @@ peste '('[a-zA-Z0-9 ]+')'. La final se revine in starea initiala (din care s-a
 facut match pe inceputul linkului).
 Imaginile sunt sumarizate dupa acelasi algoritm.
 
-===============================================================================
+==========================================================================
 
 Liste (numerotate si nenumerotate)
 
@@ -57,7 +57,7 @@ de cod si alte elemente de accentuare.
 Lista se termina atunci cand dupa introducerea a 2 newline-uri (\r\n\r\n)
 nu se gaseste un alt element de inceput pt liste sau un bloc de cod.
 
-===============================================================================
+==========================================================================
 
 Citate (blockquotes)
 
@@ -72,7 +72,7 @@ scrise in lista) fie in starea LIST_IMPORTANT (daca in lista se mai puteau
 scrie doar elemente de accentuare, blocuri de cod, linkuri, imagini sau
 citate).
 
-===============================================================================
+==========================================================================
 
 Bloc de cod
 
@@ -83,4 +83,4 @@ Astfel, un bloc de cod se poate termina doar daca dupa un newLine, urmatorul
 rand nu este identat la numarul de spatii necesare.
 Cand un astfel de match are loc, se afiseaza la stdout '[code]'.
 
-===============================================================================
+==========================================================================
