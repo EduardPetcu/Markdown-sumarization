@@ -2,6 +2,15 @@ Eduard Petcu - 334CC
 
 ==========================================================================
 
+Utilizare
+Pentru a compila programul de sumarizare Markdown, este necesar pachetul FLEX:
+sudo apt-get install flex
+iar pentru a rula programul:
+make
+./flex_program <fisier_de_tradus>
+
+==========================================================================
+
 Titluri ATX
 
 Pentru a sumariza titlurile ATX, am facut match pe siruri dupa regula [#]+ 
